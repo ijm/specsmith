@@ -1,0 +1,28 @@
+# Stuff to throw away, but maybe not.
+tmp/
+junk/
+old/
+
+# Media
+*.pdf
+*.png
+*.mp4
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macos
+.DS_Store
+
+# vim swap
+.*.s[a-w]p
+
+
+# LaTeX
+*.log
+*.aux
+*.pgf
+*.tex
+*.map
