@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD041 -->
 ## verification-tags-spec: Verification Tags Specification
 
 ### Summary
@@ -48,7 +49,7 @@ The verification tags defined below use Unicode circled letters for ease of reco
 
 * **Ⓟ — Provable**: The requirement can be verified via static analysis, structure parsing, or deterministic logic. Examples include formatting, file structure, keyword usage.  
 * **Ⓣ — Testable**: The requirement can be verified by running pass/fail tests (unit, integration, etc.).  
-* **Ⓔ — Evaluatable**: The requirement MUST include a floor–target–ceiling triple, defining the minimum acceptable value, the desired goal, and the maximum useful or plausible value of a continuious or graded measurement, such as performance, accuracy, or complexity. 
+* **Ⓔ — Evaluatable**: The requirement MUST include a floor–target–ceiling triple, defining the minimum acceptable value, the desired goal, and the maximum useful or plausible value of a continuous or graded measurement, such as performance, accuracy, or complexity.
 * **Ⓗ — Heuristically Acceptable**: The requirement is assessed subjectively or fuzzily, by human review or AI-assisted style checking.
 
 ### Prohibited Elements
@@ -61,9 +62,9 @@ The verification tags defined below use Unicode circled letters for ease of reco
 
 * **Ⓟ Provable items**:
   Can be validated via Markdown parsing and static checks. For example:
-  - Tag format and placement (Unicode check, end-of-line detection)
-  - Tag exclusivity and section placement
-  - Order and structure of the tag definitions
+  * Tag format and placement (Unicode check, end-of-line detection)
+  * Tag exclusivity and section placement
+  * Order and structure of the tag definitions
 
 * **Ⓣ Testable items**:  
   N/A — this specification defines static documents only.
@@ -73,4 +74,3 @@ The verification tags defined below use Unicode circled letters for ease of reco
 
 * **Ⓗ Heuristically Acceptable items**:  
   Clarity of definitions and semantic appropriateness may be evaluated by reviewers or style tooling.
-

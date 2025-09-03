@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD041 -->
 ## requirements-doc-spec: Requirements Document Specification
 
 ### Summary
@@ -141,6 +142,7 @@ Brief, non-implementation overview of the feature’s purpose and value.
 Note: All verification applies only to the Requirements Document’s structure and content, not to downstream implementations or generated artifacts.
 
 **Ⓟ Provable items** (static analysis of the RD):
+
 * Heading levels and required section order (`#` title; `##` for top-level sections).
 * Presence of all REQUIRED sections: `Introduction/Overview`, `Goals`, `Users and Personas` (or `Target Users`), `User Stories` (or `Use Cases`), `Functional Requirements`, `Non-Functional Requirements`, `Out of Scope (Non-Goals)`, `Design Considerations`, `Technical Considerations`, `Success Metrics`, `Assumptions and Dependencies`, `Risks and Mitigations`, `Open Questions`, `Acceptance Criteria`.
 * Requirement bullets under “Functional Requirements” and “Non-Functional Requirements” use BCP 14 keywords in uppercase.
@@ -148,13 +150,8 @@ Note: All verification applies only to the Requirements Document’s structure a
 * Proper formatting of inline code for identifiers and fenced code blocks for multiline examples.
 * Absence of prohibited strings (e.g., “try to”, “might”, “soon”) and lowercase BCP 14 keywords.
 
-**Ⓣ Testable items**:
-* N/A — the RD is a static document.
-
-**Ⓔ Evaluatable items**:
-* N/A — continuous performance measures here refer to RD content, which is statically checked.
-
 **Ⓗ Heuristically Acceptable items** (human or AI review):
+
 * Atomicity and clarity of individual requirement statements.
 * Separation of goals versus acceptance criteria and avoidance of solution-level prescriptions.
 * Reasonableness and completeness of risks, assumptions, and dependencies.

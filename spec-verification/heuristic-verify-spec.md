@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD041 -->
 ## heuristics-testing-prompt-spec: Heuristic Verification Prompt Specification
 
 ### Summary
@@ -33,7 +34,7 @@ The **evaluation prompt** is the output of this specification — a prompt that 
 * For each Ⓗ item, the generated evaluation prompt MUST include a concise question or instruction that checks the intent of that requirement. Ⓟ
 * The evaluation prompt MUST explicitly refer to the output to be evaluated, e.g., "the generated code" or "the specification produced". Ⓟ
 * The evaluation prompt SHOULD ask for justification, explanation, or examples of failure where relevant. Ⓗ
-* The evaluation prompt MUST produce a grade each item on a scale of (A-D, F). Where A indicates excelence, C is a passing grade, and F indicates complete failure or non-compliance.
+* The evaluation prompt MUST produce a grade each item on a scale of (A-D, F). Where A indicates excellence, C is a passing grade, and F indicates complete failure or non-compliance.
 * If no Ⓗ-tagged items exist in the target spec, the evaluation prompt MUST indicate that no heuristic verification is applicable. Ⓟ
 * The final evaluation prompt MUST be framed as a task that can be used in a chat or prompt-engine context (i.e., natural language, concise, and self-contained). Ⓗ
 
@@ -55,12 +56,3 @@ The **evaluation prompt** is the output of this specification — a prompt that 
 > * Does the document formatting promote readability and clarity for a junior developer?
 >
 > For each item, explain any failures or weaknesses. If all criteria are met, state that explicitly.
-
----
-
-You can now feed this **`heuristics-testing-prompt-spec`** and a **spec-to-build-test-for** into an LLM and ask:
-
-> Use the `heuristics-testing-prompt-spec` on the `spec-to-build-test-for` to build a prompt that can be used on what the `spec-to-build-test-for` would produce to validate it.
-
-This will yield a prompt tailored to the Ⓗ rules in the target spec.
-

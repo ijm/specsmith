@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD041 -->
 ## script-python-spec: Python Script Specification
 
 ### Summary
@@ -73,4 +74,3 @@ N/A
 
 **Ⓔ Evaluatable items**:
 N/A
-

@@ -1,12 +1,13 @@
+<!-- markdownlint-disable MD041 -->
 ## verification-protocol-spec: Verification Protocol Specification
 
 ### Summary
 
-This specification defines a structured, parseable protocol for reporting verification results of specification requirements. The protocol is designed to provide clear, machine-readable feedback for AI code generation loops while remaining human-readable for debugging and review.
+This specification defines a structured, parsable protocol for reporting verification results of specification requirements. The protocol is designed to provide clear, machine-readable feedback for AI code generation loops while remaining human-readable for debugging and review.
 
 ### Scope and Intent
 
-This specification provides a standardized output format for verification tools that validate specification compliance. It is intended for use by automated verification systems, AI feedback loops, and human reviewers. The protocol MUST support all verification tag types defined in the verification-tags-spec and MUST be parseable by both humans and machines.
+This specification provides a standardized output format for verification tools that validate specification compliance. It is intended for use by automated verification systems, AI feedback loops, and human reviewers. The protocol MUST support all verification tag types defined in the verification-tags-spec and MUST be parsable by both humans and machines.
 
 ### Metadata
 
@@ -32,7 +33,7 @@ version: 1.0.0
 
 * Each verification line MUST follow the format: `{verification-tag} {status} {test-name} {specification-reference} [optional-message]`. Ⓟ
 * The verification tag MUST be one of: `P`, `T`, `E`, or `H` corresponding to the verification-tags-spec definitions. Ⓟ
-* The status MUST be one of: `PASS`, `INFO`, `WARN`, `FAIL", `CRIT`, or `NIMP` (not implemented). Ⓟ
+* The status MUST be one of: `PASS`, `INFO`, `WARN`, `FAIL`, `CRIT`, or `NIMP` (not implemented). Ⓟ
 * The test name SHOULD use hyphenated-lowercase format but MAY use quoted strings for complex names. Ⓟ
 * The specification reference MUST follow the format `specification-id:line-number`. Ⓟ
 * The specification-id MUST match the specification name from its first-level heading. Ⓟ
@@ -72,7 +73,7 @@ version: 1.0.0
 
 ### Example Output
 
-```
+```text
 P PASS heading-structure meta-generation-spec:15
 P FAIL missing-section meta-generation-spec:23 "Required section 'Verification' not found"
 T PASS api-response user-auth-spec:42

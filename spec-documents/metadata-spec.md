@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD041 -->
 ## metadata-spec: Metadata Section Specification
 
 ### Summary
@@ -36,13 +37,13 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 ### Structural Constraints
 
 * The metadata MUST be placed inside a fenced block with the language identifier `yaml`. Ⓟ
-* The fenced block MUST NOT use frontmatter delimiters (i.e., `---`). Ⓟ
+* The fenced block MUST NOT use front-matter delimiters (i.e., `---`). Ⓟ
 * The YAML block MUST NOT contain anchors, aliases, or non-scalar keys. Ⓟ
 * Each metadata field SHOULD appear on its own line. Ⓗ
 
 ### Prohibited Elements
 
-* The Metadata section MUST NOT use YAML frontmatter (`---`). Ⓟ
+* The Metadata section MUST NOT use YAML front-matter (`---`). Ⓟ
 * The Metadata section MUST NOT include YAML features such as anchors, references, or tags. Ⓟ
 * Metadata fields MUST NOT use ambiguous or implicit typing (e.g., `yes`, `01`). Ⓟ
 
@@ -59,7 +60,7 @@ last_updated: 2025-04-10
 **Ⓟ Provable items**:
 
 * Use of ` ```yaml ` fenced block format
-* Disallowed YAML features (anchors, aliases, frontmatter)
+* Disallowed YAML features (anchors, aliases, front-matter)
 
 **Ⓗ Heuristically Acceptable items**:
 
@@ -69,4 +70,3 @@ last_updated: 2025-04-10
 **Ⓣ Testable items**: N/A
 
 **Ⓔ Evaluatable items**: N/A
-
