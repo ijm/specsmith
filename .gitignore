@@ -16,6 +16,9 @@ __pycache__/
 # macos
 .DS_Store
 
+# vscode/windsurf
+.vscode/
+
 # vim swap
 .*.s[a-w]p
 
