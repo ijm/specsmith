@@ -7,7 +7,7 @@ import pytest
 from _pytest.config import Config, create_terminal_writer
 from _pytest.reports import TestReport, CollectReport
 
-from verification_protocol import VerificationMessage
+from .verification_protocol import VerificationMessage
 
 class VerificationReporter:
     def __init__(self: Self, config: Config, file: TextIO | None) -> None:
