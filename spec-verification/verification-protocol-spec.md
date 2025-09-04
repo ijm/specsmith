@@ -38,7 +38,8 @@ version: 1.0.0
 * A source reference MUST follow the format `source-id:line-number`. Ⓟ
 * A floor–target–ceiling triple MUST be in the format `(floor,target,ceiling)`. Ⓟ
 * The source-id MUST match the source file name, or the specification name from its first-level heading. Ⓟ
-* Optional messages MUST be enclosed in double quotes. Ⓟ
+* The message, if present, consists of all characters after the source reference (after trimming leading whitespace). Ⓝ
+* The message MUST NOT contain any newline characters. Ⓟ
 * Multiple verification lines for the same specification requirement are permitted. Ⓝ
 
 ### Structural Constraints
@@ -46,7 +47,8 @@ version: 1.0.0
 * Each verification line MUST be a single line with no embedded newlines. Ⓟ
 * Fields MUST be separated by single space characters. Ⓟ
 * The status field MUST be exactly one of the defined values in uppercase. Ⓟ
-* Test names MUST contain only alphanumeric characters, hyphens, and underscores. Ⓟ
+* Test names MUST contain only alphanumeric characters, hyphens, and underscores or be simple quoted strings. Ⓟ
+* The message is optional and may contain any characters except newlines. Ⓟ
 
 ### Definitions
 
@@ -58,7 +60,7 @@ version: 1.0.0
 ### Prohibited Elements
 
 * Verification lines MUST NOT span multiple lines. Ⓟ
-* Test names MUST NOT contain whitespace, or quotes. Ⓟ
+* Test names MUST NOT contain whitespace unless quoted. Ⓟ
 
 ### Example Output
 
@@ -80,4 +82,4 @@ NIMP subjective-assessment documentation-spec:56 "Manual review required"
     * Status value validity (PASS, INFO, WARN, FAIL, CRIT, NIMP)
     * Specification reference format.
     * Test name format compliance.
-    * Quote matching in optional messages.
+    * Message content validation (no newlines).
