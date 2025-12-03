@@ -1,29 +1,38 @@
 ## 5. Toward a Taxonomy for Human-/AI-Readable Technical Documents
 
-We've been working on [a set of modular specifications and technical documents](https://github.com/your-repo/specs) that follows the above philosophy and can be processed by AI tools. We initially focused on creating structured specifications where we could generate both the desired object (say some code module) and a set of verifications of that object from the same specification. The goal was to have the output of the verifications looped back to the generating AI to ensure the output code meets the specification in the same way that compiler errors are currently looped back to fix code issues.
+Moving to more practical matters, we've drafted a set of modular specifications and technical documents (available on [github](https://github.com/your-repo/specs)) that follow the above philosophy in the mold of standard documentation libraries.
 
-Getting this to work led to a clearer understanding of how we should structure documents [explored more in this article](link), including how to use specifications to build specifications. But for the purposes of this discussion, we're arguing for a general shift in intuition, we will focus only on the top level and the initial ideas of determinism and decidability.
+The original goal was simple: a human and AI readable document that can :
 
-In section 4 we argued that technical documents and source code should be seen as different instantiations of the same idea, that is, describing what must be true about the result, so we can apply some concepts from compiling code to inform how the AI should translate documents.
+* be used by someone (non-technical) to confirm that it encapsulates what is desired (for example a customer or stakeholder);
+* be used by a developer (human, AI, or machine) to generate an artifact (for example, a code module, or another specification)
+* be used by a tester (human, AI, or machine) to verify the artifact is what is wanted (for example, proofs, test code, or a QA procedure)
 
-First we should separate narrative or explanatory statements from normative statements, and then facts from constraints. This will let us make verifications explicit wherever possible.
+That is the document is a single *source* of truth for all stages of development and verification.
 
-We can now treat the documents more like a compiler would. The AI can separate the parts that can be resolved (decided) immediately from those that must be passed downstream into the object being constructed. It can also generate verification code to check that what was actually constructed meets the specification.
+This allows AIs to participate in the powerful loop we already do naturally, where we use feedback from the results of building, linting or otherwise testing an artifact, to refine things and loop again. Rinse and repeat until we hopefully arrive at a consistent desirable result.
 
-However we found that, like much AI generated test code, it would often do silly things like add a test function to check that `3.14159 == 3.14159`. We solved this by adding verification hints, or tags to each normative statement to indicate what should be, for example, provable directly from the outputted object (such as by linting), what requires some form of execution testing, and what must be validated more subjectively maybe by a human. Which we, of course, turned into a specification document.
+This informed the taxonomy choices for our documents and forced a sharper understanding of how the components of each document influence the LLM. We go into much more depth about this approach [in this article](http://localhost/otherarticle), but below focus the top-level principle of determinism and decidability following from section 4.
 
-So, a practical taxonomy has a few core components:
+So, in section 4 we argued that technical documents and source code are different expressions of the same idea, both are a description of what is or must be true about some objective thing. Using this idea we can steal some familiar compiler workflow concepts and language, and apply them directly to how an AI should handle documents, particularly in how they process static analysis and verification.
 
-### Narrative Sections for Summary and Intent
+First we want a general high-level template for our documents that follows good technical writing practices. We'll separate narrative statements from assertions, and then split assertions into facts (indicative statements - things that are true now) and constraints (normative statements - things which ought to be true). This will also let us make verifications explicit wherever possible.
 
-These are mostly for human context. They explain what the system is for, why the spec exists, and what problem it solves. They shouldn't contribute to the executable or resultant structure directly.
+With this separation in place, the AI can treat a document the way a compiler treats source: resolve what can be decided immediately, propagate what cannot, and generate verification logic to confirm that the constructed object satisfies the specification.
 
-### Definitions and Terminology
+An interesting innovation came about from a common failure mode familiar to many AI-generated tests: meaningless checks like asserting that `3.14159 == 3.14159`. Our fix was to attach verification hint tags on each normative statement, indicating what is statically provable, what requires execution testing, and what requires human or heuristic validation. Those tags became their own specification.
 
-A glossary of terms, domain concepts, naming conventions, and the meanings of normative keywords. These eliminate ambiguity at the root. The definitions are part of the "compile-time environment" and resolve the meaning of later statements deterministically.
+At this point the shape of a practical structure emerges, not as rigid sections, but as a small set of components that need to exist somewhere in every document:
 
-### Functional Requirements
+* narrative context (why the thing exists);
+* definitions and terminology (the environment in which statements are interpreted);
+* atomic requirements with explicit verification tags;
+* a short list of prohibited or ambiguous constructions;
+* optional examples that act as additional constraints.
 
-These are the actual constraints and behaviors. These should be bullet-point like, with each normative statement covering a single or atomic unambiguous item, free of narrative language, and expressed in a way that can be decided or propagated, and hint (tagged) at how verification should be achieved.
+Again, none of this is about bureaucratizing writing; Templates provide recognizable common structures, which become easy to scan and provide defaults for most of the unimportant details and ideal lower the effort required to create and maintain documents. Additionally, we provide a structural framework that reduces unnecessary ambiguity so that AI tools, or a human, can reliably perform transformations on the document even if they do not realize that is what they are doing.
 
-That tagging system is a key shift: it tells the implementer which parts must be enforced and which parts must be carried forward to the next transformation step. Experienced attentive humans do this intuitively, but everyone (and thing) else benefits from explicit guidance.
+Looking forward, this direction points toward a more powerful process: documents evolve into partially executable specifications. Instead of being static descriptions, they are objects that participate in the build process. They can generate artifacts, tests, constraints, and even downstream documents. Over time, technical documents won’t merely guide or memorialize development but will instead become essential components in it, shaping how systems are built as directly as source code does today. As tooling and norms catch up, it may be that writing such documents will be seen as genuine coding at higher level, much as coding in C is to assembly.
+
+
+
