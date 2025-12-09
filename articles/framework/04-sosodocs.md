@@ -1,46 +1,16 @@
 <!-- markdownlint-disable MD041 -->
-## What is the new good enough?
+## 4. What is the new good enough?
 
-First, what properties or attributes do we want from our AI tools? If we accept that 'documentation' (in the form of prompts, specs, etc) is the way we get an AI to correctly do our bidding, then what structure, or properties do we need to impose on those documents to get those desired properties or attributes from the AIs?
+We can take ideas from history, and form the more formal methodologies to give documents more of the precision of code without loosing the human language benefits of using an LLM.
 
-This question can obviously go in many directions, but the properties I want to focus on are:
+We need to be able to give the AI the content a human would normally interpolate or 'just know'. Once that is done the AI behaves more like a compiler: It (unironically) transforms the input documents according to the given specifications, resolving decidable statements, while passing along those that can't be resolved.
 
-* Determinism: A given input always produces the same output, up to some acceptable variability, and
-* Decidability: There is some way, from the output, to prove or test that the input was adhered to.
+This framing isn’t arbitrary. Source code is itself a specification. A compiler doesn’t “follow instructions”. It checks what must be true after compilation and emits a program that satisfies that description. This dual is explored in depth [in ref](http://something.com/something), but the essential idea is that the high level properties that make code compilable are the same properties that make documentation usable by an AI.
 
-With these two properties we can iterate and evaluate the output of an AI tool.
+For brevity we'll start with determinism: each statement must have one stable interpretation, and it's close relative decidability: statements must be testable, provable, or at least checkable. Compilers rely on these constraints, and AIs do too. Without them, compilers fail, humans guess, and AIs hallucinate.
 
-This make our question wonderfully meta: We're asking what structure is 'good enough' in our instructions, so that we can evaluate that the output of the tool is good enough for whatever it is we want *that* to do.
+From this we can derive some practical criteria for “good enough” documentation. Terms and boundaries must be explicit; vague modifiers should collapse to measurable conditions. Definitions need to be clear and unambiguous so that their meaning is fixed and names don’t drift. Functional content should appear in structured form like enumerations, or tables, so the model can treat them as resolvable units rather than prose to be inferred. Lastly obsolete requirements, or unused definitions must be removed to reduce ambiguity, which we refer to as context hygiene.
 
-Determinism and decidability are properties we expect of code or a well written procedure. When we apply these ideas to documents we often call them 'specifications'.
+With these properties in place, documentation stops being commentary and more closely resembles a partially executable input: something both humans and AI tools can transform, verify, and extend within a shared workflow.
 
-However we can always think of code as a specification, or a specifications as code. Code and specifications are two sides of the same coin, and there is a deep connection and duality between them that we'll explore in depth in this (ref) article. For now, we only need a simple view of how they are related.
-
-Code tells you how to do something, while a specification tells you what is true about something.
-
-We'll use a toy example involving 'C' code, but this applies to any procedure or activity. So:
-
-```C
-int X = a + b;
-int Y = a + b;
-```
-
-You probably read this as "add `a` to `b` and put it in `X`, then add `a` to `b` and put it in `Y`". Which we'll call the procedural or code view of the code. You'd also expect a compiler to optimize the obvious redundancy here. It can do that because this isn't a procedure, but a specification: "The variable `X` must contain the sum of `a` and `b`. The variable `Y` must contain thee sum of `a` and `b`". As long as `X` and `Y` come out that way, we don't care how the compiler gets there. This is the specification view of the same code.
-
-If we give chatgpt or Claude the prompt:
-
-```text
-
-Generate the C statement lines that meet the following specifications:
-
-* the integer X must contain the sum of a and b.
-* the integer Y must contain the sum of a and b.
-
-Output only the code. Do not explain or comment.
-```
-
-It outputs exactly that above C code (link).
-
-Again this can apply to any activity, for example the duality between "Go to the store and buy 3 apples and 2 bananas" and "When you (legally) leave the store you must have 3 apples and 2 bananas". So is a grocery list a specification or a procedure? And what does the checkout receipt tell you?
-
-
+This shift toward specifications creates a need for a systematic document structure: a small set of components that make the input resolvable, testable, and stable. To make that concrete, we’ve drafted a set of modular technical documents, mostly specifications ([available here](https://github.com/your-repo/specs)) which we'll discuss in the next section.

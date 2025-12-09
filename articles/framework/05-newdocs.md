@@ -1,21 +1,19 @@
 <!-- markdownlint-disable MD041 -->
 ## 5. Toward a Taxonomy for Human-/AI-Readable Technical Documents
 
-Moving to more practical matters, we've drafted a set of modular specifications and technical documents (available on [github](https://github.com/your-repo/specs)) that follow this philosophy in the mold of standard documentation libraries. They aim at a simple goal: a document that can be
+Our practical aim now is to create documents that can be
 
-* be checked by a non-technical stakeholder to confirm intent,
-* be used by a developer (human, AI, or machine) to generate an artifact, and
-* be used by a tester (human, AI, or machine) to verify that artifact.
+* checked by a non-technical stakeholder to confirm intent,
+* used by a developer (human, AI, or machine) to generate an artifact, and
+* used by a tester (human, AI, or machine) to verify that artifact.
 
-A single *source* of truth for all stages of development and verification.
+A single *source* of truth for all stages of development and verification, that also follows the philosophy of section 4.
 
-This allows AIs to participate in the loop we already do naturally, where we use feedback from the results of building, linting or otherwise testing an artifact, to refine things and loop again. Rinse and repeat until we hopefully arrive at a consistent desirable result.
+This allows AI tools to participate in the iterative loop we already use: build something, verify it, inspect the failures, refine things, rinse, and repeat. The errors in each loop shrink, and a consistent desirable result emerges. Making this stable and predictable for an LLM clarified how the components of each document influence model behavior, and informed the taxonomy choices for our documents. We go into depth about this approach [in this article](http://localhost/otherarticle), but here we focus the high-level principle of determinism and decidability.
 
-This allows AI tools to participate in the iterative loop we already use: build something, verify it, inspect the failures, refine things, rinse, and repeat. The errors in each loop shrink, and a consistent desirable result emerges.  Making this stable and predictable for a LLM clarified how the components of each document influence model behavior, and informed the taxonomy choices for our documents. We go into depth about this approach [in this article](http://localhost/otherarticle), but here we focus the high-level principle of determinism and decidability.
+Technical documents and source code are expressions of the same idea: a description of what is or must be true about some objective entity. Using this lens, we can borrow familiar compiler workflow concepts and language, and apply them to how an AI should process documents, particularly in how they handle static analysis and verification.
 
-So, section 4 argued that technical documents and source code are different expressions of the same idea: both are a description of what is or must be true about some objective entity. Using this lens, we can borrow familiar compiler workflow concepts and language, and apply them to how an AI should process documents, particularly in how they handle static analysis and verification.
-
-To make this workable, we use a high-level template that separates narrative statements from assertions, and splits assertions into facts (indicative statements) and constraints (normative statements). This allows verifications to be explicit.
+To make this workable, we use a high-level template that separates narrative statements from assertions, and splits assertions into facts (indicative "what is" statements) and constraints (normative "what ought to be" statements). This allows verifications to be explicit.
 
 With this structure, the AI can treat a document the way a compiler treats source: resolve what can be deterministically decided, propagate what cannot be decided, and generate verification logic to confirm compliance.
 
