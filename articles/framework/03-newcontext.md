@@ -9,7 +9,7 @@ Worse, conversational corrections, common to many current tools, often make thin
 
 For an AI to produce a good result, it must be given the right information, and only the right information. It's garbage in, garbage out.
 
-However, the same is true for humans. If you give a new hire vague specs, missing assumptions, an obscure tribal shorthand, and then fail to answer their questions or provide any feedback, they’ll produce slop. Switch to another new hire and they’ll produce a variation of the same slop. That is, remove the back channels and similar slop-inducing pathologies arise in humans, unless you are very lucky.
+However, the same is true for new hires. If you give them vague specs, miss assumptions, an obscure tribal shorthand, and then fail to answer their questions or provide any feedback, they’ll produce slop. Switch to another new hire and they’ll produce a variation of the same slop. That is, remove the back channels and similar slop-inducing pathologies arise in humans, unless you are very lucky.
 
 This “luck” leads to a second anti-pattern: keep hitting that enticing redo button and hope for a “good-enough” jackpot. It’s a classic human behavior that taps into our gaming or gambling reflex; think school sci-tech expos, hackathons, or game jams, where a few “winners” emerge from a pile of under-specified but enthusiastic slop. Only now, with an AI, we can indulge this pattern dozens of times in minutes, and without HR inquiring about intern mistreatment.
 

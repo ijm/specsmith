@@ -4,8 +4,8 @@
 Our practical aim now is to create documents that can be
 
 * checked by a non-technical stakeholder to confirm intent,
-* used by a developer (human, AI, or machine) to generate an artifact, and
-* used by a tester (human, AI, or machine) to verify that artifact.
+* used by a developer (human or AI) to generate an artifact, and
+* used by a tester (human or AI) to verify that artifact.
 
 A single *source* of truth for all stages of development and verification that also follows the philosophy of section 4.
 
