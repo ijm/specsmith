@@ -21,9 +21,9 @@ A useful idea arose from a common failure mode familiar to many AI-generated tes
 
 At this point a practical taxonomy emerges, not as rigid sections, but as a small set of components that must exist somewhere in every document:
 
-* narrative context (why the thing exists);
-* definitions and terminology (the environment in which statements are interpreted);
-* atomic requirements with verification tags;
+* narrative context (why the thing exists), as narrative statements;
+* definitions and terminology (the environment in which statements are interpreted), as indicative statements;
+* atomic requirements with verification tags, as normative statements;
 * a short list of prohibited or ambiguous constructions;
 * optional examples that act as additional constraints.
 
