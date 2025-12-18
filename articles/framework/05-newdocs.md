@@ -27,6 +27,6 @@ At this point a practical taxonomy emerges, not as rigid sections, but as a smal
 * a short list of prohibited or ambiguous constructions;
 * optional examples that act as additional constraints.
 
-Again, this isn’t bureaucratic layering. Templates give predictable defaults, reduce friction, and remove accidental ambiguity so both humans and AI tools can reliably transform the document—even when unaware they are doing so.
+Again, this isn’t bureaucratic layering. Templates give predictable defaults, reduce friction, and remove accidental ambiguity, lowering cost while allowing both humans and coding AIs to reliably transform documents, even when unaware they are doing so.
 
 Over time, this pushes toward a more interesting outcome: documents become partially executable specifications. They don’t merely describe systems; they participate in building them—generating code, tests, evaluations, and downstream artifacts. As tools mature, writing such documents becomes a form of programming at a higher level of abstraction, much as C is to assembly.
