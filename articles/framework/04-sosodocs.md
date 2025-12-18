@@ -3,9 +3,9 @@
 
 We can take ideas from history and form more formal methodologies to give documents more of the precision of code without losing the human-language benefits of using an LLM.
 
-We need to be able to give the AI the content a human would normally interpolate or “just know.” Once that is done, the AI behaves more like a compiler: it (unironically) transforms the input documents according to the given specifications, resolving decidable statements while passing along those that can’t be resolved.
+We need to be able to give a coding AI the content a human would normally interpolate or “just know.” Once that is done, the AI behaves more like a compiler: it (unironically) transforms the input documents according to the given specifications, resolving decidable statements while passing along those that can’t be resolved.
 
-This framing isn’t arbitrary. Source code is itself a specification. A compiler doesn’t “follow instructions”; it looks at what must be true after compilation and emits a program that satisfies that truth. This dual code versus specification view, sometimes described as proscriptive versus descriptive, or imperative versus declarative, is explored in depth in [more here](http://something.com/something), but the essential idea for us is that the high-level properties that make code compilable are the same properties that make documentation usable by an AI.
+This framing isn’t arbitrary. Source code is itself a specification. A compiler doesn’t “follow instructions”; it looks at what must be true after compilation and emits a program that satisfies that truth. This dual code versus specification view, sometimes described as proscriptive versus descriptive, or imperative versus declarative, is explored in depth in [more here](http://something.com/something), but the essential idea for us is that the high-level properties that make code compilable are the same properties that make documentation usable by a coding AI.
 
 For brevity, we’ll start with determinism: that each statement must have one stable interpretation, and its close relative, decidability: that statements must be testable, provable, or at least checkable. Compilers rely on these constraints, and so do coding AIs. Without them, compilers fail, humans guess, and AIs hallucinate.
 
