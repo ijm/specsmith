@@ -1,0 +1,17 @@
+# Sphinx documentation
+docs/_build/
+docs/_templates/
+docs/_static/
+docs/api/
+docs/generated/
+
+# Sphinx build output
+*.doctree
+*.pickle
+*.buildinfo
+*.inv
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
