@@ -20,9 +20,12 @@ class VerificationError(Exception):
 class VerificationMessage:
     """Structured representation of a verification protocol message."""
     status: StatusType
-    test_name: str
-    source_ref: str
+    test_name: str 
+    """Alphanumeric or quoted string"""
+    source_ref: str 
+    """String of the form ``source:line``"""
     message: str | None = None
+    """Optional string message must not contain newline characters"""
 
     def __post_init__(self) -> None:
         """Validate fields according to spec."""

@@ -17,15 +17,14 @@ version: 1.0.0
 
 ### Imports and Inheritance
 
-* This specification conforms to the Commonmark Markdown specification.
-* Versioning, change tracking, and change logs are external, and conform to the meta-versioning-spec.
-* The Metadata section conforms to the meta-data-spec.
-* This specification conforms to the BCP 14 keyword specification.
-* The tag symbols Ⓟ, Ⓣ, Ⓔ, Ⓗ, and Ⓝ definition and usage conforms to the verification-tags-spec (this specification).
+* This specification conforms to the following specifications:
+  * Commonmark Markdown,
+  * BCP 14 keyword,
+  * verification-tags-spec.md,
+  * metadata-spec.md,
+  * versioning-spec.md
 
 ### Terminology and Conventions
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 (RFC 2119 and RFC 8174) when, and only when, they appear in all capitals.
 
 The verification tags Ⓟ, Ⓣ, Ⓔ, Ⓗ, and Ⓝ are defined below use Unicode circled letters for ease of recognition and machine parsing.
 
@@ -49,11 +48,11 @@ The verification tags Ⓟ, Ⓣ, Ⓔ, Ⓗ, and Ⓝ are defined below use Unicode 
 
 ### Verification Tag Definitions
 
-* **Ⓟ — Provable**: The requirement can be verified via static analysis, structure parsing, or deterministic logic. Examples include formatting, file structure, keyword usage.
-* **Ⓣ — Testable**: The requirement can be verified by running pass/fail tests (unit, integration, etc.).
-* **Ⓔ — Evaluatable**: The requirement MUST include a floor–target–ceiling triple, defining the minimum acceptable value, the desired goal, and the maximum useful or plausible value of a continuous or graded measurement, such as performance, accuracy, or complexity.
-* **Ⓗ — Heuristically Acceptable**: The requirement is assessed subjectively or fuzzily, by human review or AI-assisted style checking.
-* **Ⓝ - Notation**: The requirement is a notation, annotation, or implementation detail that is not subject to verification.
+* Ⓟ — Provable: The requirement can be verified via static analysis, structure parsing, or deterministic logic. Examples include formatting, file structure, keyword usage.
+* Ⓣ — Testable: The requirement can be verified by running pass/fail tests (unit, integration, etc.).
+* Ⓔ — Evaluatable: The requirement MUST include a floor–target–ceiling triple, defining the minimum acceptable value, the desired goal, and the maximum useful or plausible value of a continuous or graded measurement, such as performance, accuracy, or complexity.
+* Ⓗ — Heuristically Acceptable: The requirement is assessed subjectively or fuzzily, by human review or AI-assisted style checking.
+* Ⓝ - Notation: The requirement is a notation, annotation, or implementation detail that is not subject to verification.
 
 ### Prohibited Elements
 
@@ -63,11 +62,11 @@ The verification tags Ⓟ, Ⓣ, Ⓔ, Ⓗ, and Ⓝ are defined below use Unicode 
 
 ### Verification
 
-* **Ⓟ Provable items**:
+* Ⓟ Provable items:
   SHOULD be validated via Markdown parsing and static checks. For example:
   * Tag format and placement (Unicode check, end-of-line detection)
   * Tag exclusivity and section placement
   * Order and structure of the tag definitions
 
-* **Ⓗ Heuristically Acceptable items**:
+* Ⓗ Heuristically Acceptable items:
   Clarity of definitions and semantic appropriateness SHOULD be evaluated by reviewers, style tooling, or AI.

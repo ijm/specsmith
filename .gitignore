@@ -27,5 +27,5 @@ __pycache__/
 *.log
 *.aux
 *.pgf
-*.tex
+# *.tex
 *.map

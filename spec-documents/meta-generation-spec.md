@@ -17,46 +17,46 @@ version: 1.0.0
 
 ### Imports and Inheritance
 
-* This specification conforms to the Commonmark Markdown specification.
-* This specification conforms to the BCP 14 keyword specification.
-* The tag symbols Ⓟ, Ⓣ, Ⓔ, and Ⓗ definition and usage conforms to the verification-tags-spec specification.
-* The Metadata section conforms to the metadata-spec specification.
+* This specification conforms to the following specifications:
+  * Commonmark Markdown,
+  * BCP 14 keyword,
+  * verification-tags-spec.md,
+  * metadata-spec.md,
+  * versioning-spec.md
 
 ### Terminology and Conventions
 
-* The generated specification is referred to simply as 'the specification'. This meta-specificaiton is always referred to as 'meta-specification'.
-* The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 (RFC 2119 and RFC 8174) when, and only when, they appear in all capitals.
+* The specification to be generated is referred to as 'the specification'. This meta-specification is and MUST be referred to as 'meta-specification'.
 
 ### Functional Requirements
 
-* The specification MUST conform to the Commonmark Markdown specification.
-* The specification MUST conform to the BCP 14 keyword specification.
-* The tag symbols Ⓟ, Ⓣ, Ⓔ, and Ⓗ definition and usage MUST conform to the verification-tags-spec specification.
-* The specification's metadata section MUST conform to the metadata-spec specification.
-* The specification SHOULD be designed to be composable with other specifications (i.e., includable, or copy-pasteable without modification). Ⓗ
-* The first section title in the document MUST be a level-2 heading (`##`) and MUST contain the name and title of the specification. Ⓟ
-* The specification MUST include the following sub-sections, in order: Summary, Scope and Intent, Metadata, Imports and Inheritance, Terminology and Conventions, Functional Requirements, Structural Constraints, Definitions (Optional), Prohibited Elements, Example Output (Optional), and Verification. Ⓟ
-* Each sub-section heading MUST be a level-3 heading (`###`). Ⓟ
-* Each line item in the Functional Requirements, Structural Constraints, and Prohibited Elements sections SHOULD include one of the verification tags (Ⓟ, Ⓣ, Ⓔ, Ⓗ ) to indicate how compliance is to be determined. Ⓟ
-* The "Imports and Inheritance" section MUST contain any and all referenced specifications. Ⓟ
-* Referenced specifications MUST be identified by their exact title as it appears in their first-level heading. Ⓟ
-* All inherited specifications MUST be followed. Ⓟ
-* Minor specification conflicts, that is, those that will have no effect on the resultant build MUST be reported as a warning. All other inconsistencies or conflicts in or between specifications MUST be treated as terminal and reported as such. DO NOT attempt to find a resolution, or common compromise. Ⓗ
-* The “Verification” section MUST include instructions for verifying all tagged requirements. Ⓟ
-* Outdated requirements MUST be either explicitly updated, replaced with MUST NOT, or removed entirely. Specifications MUST NOT retain deprecated elements. Ⓟ
-* The specification MUST avoid ambiguous language and MUST use imperative voice. Ⓗ
-* Version control MUST be handled externally. Version information MAY appear in the metadata section for information use only. Ⓗ
+* F01: Specification names SHOULD be in slug-case, and MUST NOT contain white space. Ⓟ
+* F02: The specification SHOULD be designed to be composable with other specifications (i.e., includable, or copy-pasteable without modification). Ⓗ
+* F03: Each line item in the Functional Requirements, Structural Constraints, and Prohibited Elements sections SHOULD include one of the verification tags (Ⓟ, Ⓣ, Ⓔ, Ⓗ, Ⓝ) to indicate how compliance is to be determined. Ⓟ
+* F04: The "Imports and Inheritance" section MUST contain any and all referenced specifications. Ⓟ
+* F05: Minor specification conflicts, that is, those that will have no effect on the resultant build MUST be reported as a warning. All other inconsistencies or conflicts in or between specifications MUST be treated and reported as terminal. DO NOT attempt to find a resolution, or common compromise. Ⓗ
+* F06: The “Verification” section MUST include instructions for verifying all tagged requirements. Ⓟ
+* F07: Outdated requirements MUST be either explicitly updated, replaced with MUST NOT, or removed entirely. Specifications MUST NOT retain deprecated elements. Ⓟ
+* F08: The specification MUST avoid ambiguous language and MUST use imperative voice. Ⓗ
+* F09: Version control MUST be handled externally. Version information MAY appear in the metadata section for information use only. Ⓗ
 
 ### Structural Constraints
 
-* Bullet points MUST be used for all individual requirements. Ⓟ
-* Inline code formatting MUST be used for all references to identifiers, file names, and code literals. Ⓟ
-* Fenced code blocks (\`\`\`) MUST be used for all multi-line code examples. Ⓟ
-* Each requirement tag (Ⓟ, Ⓣ, Ⓔ, Ⓗ ) MUST appear only on bullet point requirements, not on headings or section titles. Ⓟ
-* Section headings MUST NOT be bolded. Bold MAY be used for section titles or emphasis within paragraphs. Ⓟ
-* The Imports and Inheritance section SHOULD include the 'Commonmark Markdown', 'BCP 14 keyword', 'verification-tags-spec', and metadata-spec specifications, exactly as in this meta-specification.
-* The Terminology and Conventions section MUST include the full BCP 14 boilerplate as specified. Ⓟ
-* Specifications SHOULD prioritize human-readable formatting; specification parsing MUST NOT depend on layout beyond Markdown structural conventions. Ⓟ
+* S01: Specifications SHOULD prioritize human-readable formatting; specification parsing MUST NOT depend on layout beyond Markdown structural conventions. Ⓟ
+* S02: Specifications SHOULD include the 'Commonmark Markdown', 'BCP 14 keyword', 'verification-tags-spec', and metadata-spec specifications. Ⓟ
+* Sections:
+  * S11: The first section title in the document MUST be a level-2 heading (`##`) and MUST contain the name and title of the specification. Ⓟ
+  * S12: Sub-sections SHOULD be level-3 headings ('###'). Ⓟ
+  * S13: The specification MUST include the following sub-sections, in order: Summary, Scope and Intent, Metadata, Imports and Inheritance, Terminology and Conventions, Functional Requirements, Structural Constraints, Definitions (Optional), Prohibited Elements, Example Output (Optional), and Verification. Ⓟ
+* Styling:
+  * S21: Bolding and emphasis MUST NOT be used outside narrative sections. Ⓟ
+  * S22: Inline code formatting (`\`) MUST be used for all references, identifiers, file names, and code literals. Ⓟ
+  * S23: Fenced code blocks (\`\`\`{language}) MUST be used for all multi-line code examples, and MUST include the language identifier. Ⓟ
+* Individual specification points:
+  * S31: MUST be formatted as bullet points (`*`) followed by a line identifier, and a colon. Ⓟ
+  * S32: MAY be a multi-line bullet point, and MAY include additional formatting.
+  * S33: Verification tags (Ⓟ, Ⓣ, Ⓔ, Ⓗ, Ⓝ) MUST appear on bullet specification points. Ⓟ
+  * S34: Line identifiers MUST be unique within the specification, but do not need to be sequentially.
 
 ### Definitions
 
@@ -74,27 +74,17 @@ version: 1.0.0
 
 ### Prohibited Elements
 
-* Specifications MUST NOT use vague terms such as “try to”, “ideally”, or “might”. Ⓟ
-* Specifications MUST NOT omit any of the REQUIRED sections listed above. Ⓟ
-* Specifications MUST NOT use BCP 14 keywords in lowercase or inconsistent capitalization. Ⓟ
-* Specifications MUST NOT use narrative prose outside of the Summary and Scope and Intent sections. Ⓗ
+* P01: Specifications MUST NOT use vague terms such as “try to”, “ideally”, or “might”. Ⓟ
+* P02: Specifications MUST NOT use narrative prose outside of the Summary and Scope and Intent sections. Ⓗ
 
 ### Verification
 
-* **Ⓟ Provable items**:
-  Can be verified by static analysis of the Markdown structure. This includes checking:
-
+* **Ⓟ Provable items**: Can be verified by static analysis of the Markdown structure. This includes checking:
   * Heading levels and their order
-  * Presence of BCP 14 boilerplate
   * Proper tagging of bullet points
   * Correct use of inline formatting and fenced code blocks
-    Tools: Markdown parsers, regex, or AST-style analysis of the output document.
-
-* **Ⓣ Testable items**:
-  N/A in this specification. The output is a static document.
-
-* **Ⓔ Evaluatable items**:
-  N/A in this specification. The output is a static document.
-
+  * Tools: Markdown parsers, regex, or AST-style analysis of the output document.
+* **Ⓣ Testable items**: N/A
+* **Ⓔ Evaluatable items**: N/A
 * **Ⓗ Heuristically Acceptable items**:
-  Can be reviewed via human inspection, style tools, or AI analysis.
+  * Can be reviewed via human inspection, style tools, or AI analysis.

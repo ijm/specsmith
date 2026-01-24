@@ -21,8 +21,8 @@ class ProtocolResult(unittest.TextTestResult):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.dots = False  # Disable dot output
-        self.showAll = False  # Disable verbose output
+        self.dots = False
+        self.showAll = False
         
     def addSuccess(self, test):
         super().addSuccess(test)
@@ -88,8 +88,8 @@ class ProtocolResult(unittest.TextTestResult):
 class ProtocolRunner(unittest.TextTestRunner):
     """Runner that uses ProtocolResult for test execution."""
     def __init__(self, stream=sys.stdout, descriptions=True, verbosity=1, **kwargs):
-        super().__init__(stream=stream, 
-                        descriptions=descriptions, 
+        super().__init__(stream=stream,
+                        descriptions=descriptions,
                         verbosity=verbosity,
                         resultclass=ProtocolResult,
                         **kwargs)

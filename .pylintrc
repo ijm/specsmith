@@ -1,0 +1,13 @@
+[FORMAT]
+# Maximum number of characters on a single line
+max-line-length=120
+
+# Good variable names which should always be accepted, separated by a comma
+good-names=i,j,k,ex,Run,_,id,x,y,z
+
+# Maximum number of lines in a module
+max-module-lines=1000
+
+[MESSAGES CONTROL]
+# Disable the message, report, category or checker with the given id(s)
+disable=missing-docstring, too-few-public-methods, import-error, invalid-name, too-many-arguments, too-many-instance-attributes, too-many-locals, too-many-branches, too-many-statements, fixme, line-too-long, pointless-string-statement
