@@ -1,0 +1,28 @@
+\usepackage{fontspec}
+% \setmainfont{Arial Unicode MS}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage[unicode=true,
+ bookmarks=false,
+ breaklinks=false,pdfborder={0 0 1},backref=section,colorlinks=true]
+ {hyperref}
+\hypersetup{pdftex,linkcolor=blue,citecolor=blue,unicode}
+\usepackage{tcolorbox}
+\newtcolorbox{asidebox}{colback=gray!10!white,
+                            colframe=gray!50!black,
+                            boxrule=0.5pt,
+                            arc=2mm,
+                            left=1mm,
+                            right=1mm,
+                            top=1mm,
+                            bottom=1mm}
+\newenvironment{aside}{\begin{asidebox}}{\end{asidebox}}
+
+\usepackage{newunicodechar}
+\newunicodechar{≤}{\ensuremath{\le}}
+\newunicodechar{≠}{\ensuremath{\ne}}
+
+
