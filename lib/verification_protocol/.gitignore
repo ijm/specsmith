@@ -1,9 +1,8 @@
 # Sphinx documentation
-docs/_build/
-docs/_templates/
-docs/_static/
-docs/api/
-docs/generated/
+docs/
+docs/build/
+docs/source/_static/
+docs/source/_templates/
 
 # Sphinx build output
 *.doctree
@@ -15,3 +14,4 @@ docs/generated/
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
