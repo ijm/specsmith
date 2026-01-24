@@ -1,4 +1,4 @@
-L=../../pdf
+L=../../scripts/pdf
 
 INS=\
   01-intro.md \
