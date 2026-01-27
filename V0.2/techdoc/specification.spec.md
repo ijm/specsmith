@@ -18,6 +18,9 @@ This conforms to :
 ### Terminology and Conventions
 
 * D01 A SPECIFICATION is a TECHDOC whose NORMATIVE STATEMENTS define constraints on artifacts, processes, or other documents.
+* S14 Definition SECTIONS such as Terminology, Conventions, Vocabulary, etc SHOULD contain only INDICATIVE STATEMENTS.
+* S15 Constraint SECTIONS such as Functions, Structural, etc SHOULD contain only NORMATIVE STATEMENTS.
+
 
 ### Functional Constraints
 
@@ -39,10 +42,8 @@ This conforms to :
 * A SPECIFICATION DOCUMENT MUST contain the following SECTIONS, in the order listed:
   * S11 Summary
   * S12 Scope (OPTIONAL)
-  * S13 Inheritance (OPTIONAL)
-  * S14 Definition SECTIONS (Terminology, Conventions, Vocabulary, etc) (OPTIONAL)
-  * S15 Constraint SECTIONS (Functions, Structural, etc)
+  * S13 Imports & Inheritance (OPTIONAL)
+  * S14 Definition SECTIONS (OPTIONAL)
+  * S15 Constraint SECTIONS
   * S16 Explicitly Prohibited Elements (OPTIONAL)
   * S17 Verification Methodologies
-* S23 Inline code formatting MUST be used for identifiers, filenames, keywords, and literals.
-* S24 Fenced code blocks MUST be used for all multi-line examples and MUST declare a language.
