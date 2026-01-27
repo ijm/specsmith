@@ -40,3 +40,11 @@ This document conforms to:
 * A04 Each ASSERTION STATEMENT MUST have a unique identifier within the document.
 * A05 INDICATIVE ASSERTIONS MUST NOT impose conformance constraints.
 * A06 A NORMATIVE ASSERTION MUST contain at least one NORMATIVE indicator (e.g. MUST or SHOULD NOT)
+
+#### Common STE Rules
+
+* S01 A STATEMENT SHOULD be expressed as a simple declarative sentence.
+* S02 A STATEMENT MUST be written so that it has exactly one plausible interpretation within the scope of the document..
+* S03 A STATEMENT SHOULD NOT use ambiguous or weakly modal language (e.g. “try to”, “ideally”, “might”).
+* S04 A STATEMENT MUST NOT rely on implied context, unstated conditions, or assumed prior steps.
+* S05 A STATEMENT SHOULD NOT contain multiple coordinated actions unless their order and dependence are explicit.
