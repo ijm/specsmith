@@ -1,0 +1,6 @@
+geometry: margin=1in
+fontsize: 11pt
+standalone: true
+from: markdown+fenced_divs+implicit_header_attributes
+
+# bibliography: refs.bib

@@ -23,9 +23,9 @@ This document conforms to:
 * D05 An ASSERTION is a STATEMENT intended to be truth-apt within the scope of the document which is intended to be evaluated for correctness.
 * D06 An INDICATIVE STATEMENT is an ASSERTION that something is true. It states a fact or defines meaning.
 * D07 A NORMATIVE STATEMENT is an ASSERTION that states what must hold true in order to conform. It prescribes constraints or required behavior. It restricts the set of ADMISSIBLE realizations of a system or artifact.
-D08 An IMPERATIVE STATEMENT is a STATEMENT that directs action or behavior. It prescribes what MUST be done.
-D09 A CONDITIONAL STATEMENT is an IMPERATIVE STATEMENT whose applicability is guarded by one or more ASSERTIONS that must be evaluated.
-D10 An UNCONDITIONAL STATEMENT is an unguarded IMPERATIVE STATEMENT.
+* D08 An IMPERATIVE STATEMENT is a STATEMENT that directs action or behavior. It prescribes what MUST be done.
+* D09 A CONDITIONAL STATEMENT is an IMPERATIVE STATEMENT whose applicability is guarded by one or more ASSERTIONS that must be evaluated.
+* D10 An UNCONDITIONAL STATEMENT is an unguarded IMPERATIVE STATEMENT.
 
 ### Common Section Roles
 

@@ -1,0 +1,98 @@
+\usepackage{luacode}
+
+\newcommand{\getenv}[1]{
+  \directlua{
+    local value = os.getenv("#1")
+    if value then
+      tex.sprint(value)
+    end
+  }
+}
+
+\def\basename{\getenv{BASENAME}}
+\def\title{\getenv{TITLE}}
+\usepackage{fontspec}
+% \setmainfont{Arial Unicode MS}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage[unicode=true,
+ bookmarks=false,
+ breaklinks=false,pdfborder={0 0 1},backref=section,colorlinks=true]
+ {hyperref}
+\hypersetup{pdftex,linkcolor=blue,citecolor=blue,unicode}
+\usepackage{tcolorbox}
+\newtcolorbox{asidebox}{colback=gray!10!white,
+                            colframe=gray!50!black,
+                            boxrule=0.5pt,
+                            arc=2mm,
+                            left=1mm,
+                            right=1mm,
+                            top=1mm,
+                            bottom=1mm}
+\newenvironment{aside}{\begin{asidebox}}{\end{asidebox}}
+
+\usepackage{newunicodechar}
+\newunicodechar{≤}{\ensuremath{\le}}
+\newunicodechar{≠}{\ensuremath{\ne}}
+
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\thispagestyle{fancy}
+
+% Headings and footer structure
+\usepackage{pdftexcmds}
+\makeatletter
+\def\thehash{\pdf@filemdfivesum {\jobname.tex}}
+
+\chead{}
+\lhead{\title}
+\rhead{\basename}
+\lfoot{\thelicenseFoot}
+\rfoot{\texttt{\thehash}\\ \today}
+\cfoot{\thepage}
+
+% Licensing.
+\usepackage[
+    type={CC},
+    modifier={by-nc-nd},
+    version={4.0},
+]{doclicense}
+
+% define which license to use for titles.
+\def\thelicenseFoot{\small\doclicenseName\\\doclicenseIcon} 
+\def\thelicenseTab{\doclicenseLongNameRef}
+
+% Title and Section Headers
+\usepackage{titling}
+\setlength{\droptitle}{-1cm}
+
+\usepackage[compact]{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\raggedright}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\raggedright}
+  {\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\raggedright}
+  {\thesubsubsection}{1em}{}
+\titlespacing{\section}{0pt}{8pt}{4pt}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{10pt}{*0}
+
+% other settings
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\setlength{\intextsep}{2pt}
+\date{}
+
+
+
+
