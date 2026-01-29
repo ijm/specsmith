@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## Document Vocabulary
+## document.vocab: Document Vocabulary
 
 ### Introduction
 
@@ -17,12 +17,12 @@ This document conforms to:
 
 ### Taxonomy
 
-* D02 A SECTION is a group of STATEMENTS with a heading indicating the role in a document.
-* D03 A STATEMENT is a single atomic unit of information expressed in a document.
-* D04 A NARRATIVE STATEMENT is explanatory, motivational, or contextual in purpose.
-* D05 An ASSERTION is a STATEMENT intended to be truth-apt within the scope of the document which is intended to be evaluated for correctness.
-* D06 An INDICATIVE STATEMENT is an ASSERTION that something is true. It states a fact or defines meaning.
-* D07 A NORMATIVE STATEMENT is an ASSERTION that states what must hold true in order to conform. It prescribes constraints or required behavior. It restricts the set of ADMISSIBLE realizations of a system or artifact.
+* D01 A SECTION is a group of STATEMENTS with a heading indicating the role in a document.
+* D02 A STATEMENT is a single atomic unit of information expressed in a document.
+* D03 A NARRATIVE STATEMENT is explanatory, motivational, or contextual in purpose.
+* D04 An ASSERTION is a STATEMENT intended to be truth-apt within the scope of the document which is intended to be evaluated for correctness.
+* D05 An INDICATIVE STATEMENT is an ASSERTION that something is true. It states a fact or defines meaning.
+* D06 A NORMATIVE STATEMENT is an ASSERTION that states what must hold true in order to conform. It prescribes constraints or required behavior. It restricts the set of ADMISSIBLE realizations of a system or artifact.
 * D08 An IMPERATIVE STATEMENT is a STATEMENT that directs action or behavior. It prescribes what MUST be done.
 * D09 A CONDITIONAL STATEMENT is an IMPERATIVE STATEMENT whose applicability is guarded by one or more ASSERTIONS that must be evaluated.
 * D10 An UNCONDITIONAL STATEMENT is an unguarded IMPERATIVE STATEMENT.

@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## TECHDOC XML Encoding Profile
+## techdoc-encoding-xml.spec: TECHDOC XML Encoding Profile
 
 ### Summary
 
@@ -10,6 +10,7 @@ This document defines an XML-based ENCODING profile for TECHDOCs.
 This document inherits from:
 
 * [Standard Vocabulary](std.vocab.md)
+* [Verification Vocabulary](verification-tags.vocab.md)
 * [TECHDOC Structural Specification](techdoc-core.spec.md)
 * [TECHDOC Encoding Specification](techdoc-encoding.spec.md)
 
@@ -31,7 +32,7 @@ This document conforms to:
 * X06 NARRATIVE and INDICATIVE STATEMENTS MUST be encoded as `<statement>` elements containing text content only.
 * X07 NORMATIVE STATEMENTS MUST be encoded as `<statement>` elements with:
   * an `id` attribute containing the STATEMENT identifier,
-  * a `type` attribute containing the verification type,
+  * a `type` attribute mapping to the VERIFICATION-INDICATOR,
   * text content containing the STATEMENT text.
 * X10 Data SECTIONS MUST contain exactly one `<data>` child element with:
   * a `language` attribute identifying the data language (e.g. `yaml`, `json`),

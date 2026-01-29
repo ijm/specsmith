@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## (Meta) Specification Specification
+## specification.spec: (Meta) Specification Specification
 
 ### Summary
 
@@ -18,18 +18,17 @@ This conforms to :
 ### Terminology and Conventions
 
 * D01 A SPECIFICATION is a TECHDOC whose NORMATIVE STATEMENTS define constraints on artifacts, processes, or other documents.
-* S14 Definition SECTIONS such as Terminology, Conventions, Vocabulary, etc SHOULD contain only INDICATIVE STATEMENTS.
-* S15 Constraint SECTIONS such as Functions, Structural, etc SHOULD contain only NORMATIVE STATEMENTS.
-
+* D02 Definition SECTIONS such as Terminology, Conventions, Vocabulary, etc SHOULD contain only INDICATIVE STATEMENTS.
+* D03 Constraint SECTIONS such as Functions, Structural, etc SHOULD contain only NORMATIVE STATEMENTS.
 
 ### Functional Constraints
 
-* F02 A SPECIFICATION SHOULD address exactly one topic, component, or module.
-* F03 A SPECIFICATION SHOULD be composable with other specifications without modification.
-* F04 All conformance requirements MUST be expressed exclusively as NORMATIVE STATEMENTS.
-* F05 All external SPECIFICATIONS relied upon MUST be listed in an Imports & Inheritance SECTION.
-* F06 Version control MUST be handled externally; version identifiers, if present, MUST be informational only.
-* F07 Deprecated requirements MUST NOT appear; removal or explicit prohibition is required.
+* F01 A SPECIFICATION SHOULD address exactly one topic, component, or module.
+* F02 A SPECIFICATION SHOULD be composable with other specifications without modification.
+* F03 All conformance requirements MUST be expressed exclusively as NORMATIVE STATEMENTS.
+* F04 All external SPECIFICATIONS relied upon MUST be listed in an Imports & Inheritance SECTION.
+* F05 Version control MUST be handled externally; version identifiers, if present, MUST be informational only.
+* F06 Deprecated requirements MUST NOT appear; removal or explicit prohibition is required.
 
 #### Conflict Handling
 

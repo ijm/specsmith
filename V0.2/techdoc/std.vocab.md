@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## Standard Vocabulary
+## std.vocab: Standard Vocabulary
 
 ### Summary
 
@@ -14,7 +14,10 @@ This document conforms to:
 ### General Definitions
 
 * D01 A TECHDOC is a document conforming to the [TECHDOC Specification](techdoc.spec.md) in this framework.
-* D31 An artifact is ADMISSIBLE if it satisfies all constraints in its governing document.
+* D02 A DEFINED-TERM is a capitalized lexical unit (e.g. a word) whose meaning is fixed by exactly one defining INDICATIVE STATEMENT.
+* D03 Multi-word capitalization without hyphenation MUST NOT be interpreted as a DEFINED-TERM.
+* D04 A reader or processor MUST NOT introduce, assume, or invent DEFINED-TERMs beyond those explicitly defined in in-scope documents.
+* D05 An artifact is ADMISSIBLE if it satisfies all constraints in its governing document.
 
 ### Keywords in Normative Statements
 

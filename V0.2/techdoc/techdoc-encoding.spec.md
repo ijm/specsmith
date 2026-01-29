@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## TECHDOC Encoding Specification
+## techdoc-encoding.spec: TECHDOC Encoding Specification
 
 ### Summary
 

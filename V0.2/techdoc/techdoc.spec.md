@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## TECHDOC Specification
+## techdoc.spec: TECHDOC Specification
 
 ### Inheritance
 

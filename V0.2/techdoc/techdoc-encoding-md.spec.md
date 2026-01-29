@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## TECHDOC Markdown Encoding Profile
+## techdoc-encoding-md.spec: TECHDOC Markdown Encoding Profile
 
 ### Summary
 
@@ -30,3 +30,4 @@ This document conforms to:
 * M31 Each list item corresponds to exactly one ASSERTION STATEMENT.
 * M40 Each ASSERTION STATEMENT MUST begin with a unique identifier followed by a space.
 * M41 Verification indicators, if present, MUST appear at the end of the list item.
+* M42 VERIFICATION INDICATORS MUST use a single unicode encircled letter: Ⓟ for PROVABLE, Ⓣ for TESTABLE, Ⓔ for EVALUATABLE, Ⓗ for HEURISTIC, Ⓝ for NON-VERIFIABLE.

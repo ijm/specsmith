@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## TECHDOC JSON Encoding Profile
+## techdoc-encoding-json.spec: TECHDOC JSON Encoding Profile
 
 ### Summary
 
@@ -30,7 +30,7 @@ This document conforms to:
 * J05 NARRATIVE and INDICATIVE STATEMENTS MUST be represented as strings.
 * J06 NORMATIVE STATEMENTS MUST be represented as objects containing:
   * `"id"`: string, the STATEMENT's unique identifier.
-  * `"type"`: string, the verification type.
+  * `"type"`: string, maps to the VERIFICATION-INDICATOR,
   * `"content"`: string, the statement text.
 * J10 Data SECTION MUST contain the fields:
   * `"language"` : string, data language identifier (e.g. `yaml`, `json`).

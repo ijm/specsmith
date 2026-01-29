@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## TECHDOC Core Structural Specification
+## techdoc-core.spec: TECHDOC Core Structural Specification
 
 ### Summary
 
@@ -25,6 +25,7 @@ This document conforms to:
 #### General
 
 * T01 A TECHDOC MUST contain an ordered collection of named NARRATIVE, ASSERTION, or Data SECTIONS.
+* T02 A reader or processor MUST NOT introduce, assume, or invent DEFINED-TERMs beyond those explicitly defined in-scope.
 
 #### Sections
 
@@ -43,8 +44,8 @@ This document conforms to:
 
 #### Common STE Rules
 
-* S01 A STATEMENT SHOULD be expressed as a simple declarative sentence.
-* S02 A STATEMENT MUST be written so that it has exactly one plausible interpretation within the scope of the document..
-* S03 A STATEMENT SHOULD NOT use ambiguous or weakly modal language (e.g. “try to”, “ideally”, “might”).
-* S04 A STATEMENT MUST NOT rely on implied context, unstated conditions, or assumed prior steps.
-* S05 A STATEMENT SHOULD NOT contain multiple coordinated actions unless their order and dependence are explicit.
+* E01 A STATEMENT SHOULD be expressed as a simple declarative sentence.
+* E02 A STATEMENT MUST be written so that it has exactly one plausible interpretation within the scope of the document..
+* E03 A STATEMENT SHOULD NOT use ambiguous or weakly modal language (e.g. “try to”, “ideally”, “might”).
+* E04 A STATEMENT MUST NOT rely on implied context, unstated conditions, or assumed prior steps.
+* E05 A STATEMENT SHOULD NOT contain multiple coordinated actions unless their order and dependence are explicit.
