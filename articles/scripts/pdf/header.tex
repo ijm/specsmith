@@ -1,6 +1,8 @@
+\makeatletter
+\usepackage{luacode}
+
 \usepackage{fontspec}
 % \setmainfont{Arial Unicode MS}
-
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -12,17 +14,100 @@
 \hypersetup{pdftex,linkcolor=blue,citecolor=blue,unicode}
 \usepackage{tcolorbox}
 \newtcolorbox{asidebox}{colback=gray!10!white,
-                            colframe=gray!50!black,
-                            boxrule=0.5pt,
-                            arc=2mm,
-                            left=1mm,
-                            right=1mm,
-                            top=1mm,
-                            bottom=1mm}
+                       colframe=gray!50!black,
+                       boxrule=0.5pt, arc=2mm,
+                       left=1mm,      right=1mm,
+                       top=1mm,       bottom=1mm}
 \newenvironment{aside}{\begin{asidebox}}{\end{asidebox}}
 
 \usepackage{newunicodechar}
 \newunicodechar{≤}{\ensuremath{\le}}
 \newunicodechar{≠}{\ensuremath{\ne}}
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\thispagestyle{fancy}
+% pandoc templates force first page to plane. Do this 
+% instead of modifying template or \maketitle
+\fancypagestyle{plain}{\pagestyle{fancy}}
+
+% Headings and footer structure
+\usepackage{pdftexcmds}
+\def\thehash{\pdf@filemdfivesum {\jobname.tex}}
+
+\chead{}
+\lhead{\@title}
+\rhead{\@author}
+\lfoot{\thelicenseFoot}
+\rfoot{\texttt{\thehash}\\ \today}
+\cfoot{\thepage}
+
+% Licensing, annoying to set from frontmatter.
+\usepackage[
+    type={CC},
+    modifier={by-nc-nd},
+    version={4.0},
+]{doclicense}
+
+\def\thelicenseFoot{\small\doclicenseName\\\doclicenseIcon} 
+\def\thelicenseTab{\doclicenseLongNameRef}
+
+% Title and Section Headers
+\usepackage{titling}
+\setlength{\droptitle}{-1cm}
+
+\usepackage[compact]{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\raggedright}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\raggedright}
+  {\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\raggedright}
+  {\thesubsubsection}{1em}{}
+%\titlespacing{\section}{0pt}{8pt}{4pt}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+%\titlespacing{\subsubsection}{0pt}{10pt}{*0}
+
+
+% Boiler plate table for copyright, licensing, audience etc. from frontmatter.
+\def\boilerplate{
+\begin{tabular*}{1\columnwidth}{@{\extracolsep{\fill}}r>{\raggedright}p{14.0cm}}
+\hline 
+Scope & \thescope\tabularnewline
+Audience & \theaudience\tabularnewline
+Copyright & \thecopyright\tabularnewline
+License & \thelicenseTab\tabularnewline
+Revisions & \therevision\tabularnewline
+Git Hash & \small\texttt{\thegithash}\tabularnewline
+Doc Hash & \small\texttt{\thehash}\tabularnewline
+\hline 
+\end{tabular*}
+}
+
+% pandoc resets author and date so need surgery in @maketitle
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em
+  \vspace *{\droptitle }
+  \maketitlehooka {\@bspretitle \@title \@bsposttitle }
+  %\maketitlehookb {\@bspreauthor \@author \@bspostauthor }
+  %\maketitlehookc {\@bspredate \@date \@bspostdate }
+  \maketitlehookd \par
+  \vskip 2em
+}
+
+% other settings
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\setlength{\intextsep}{2pt}
+
+\makeatother
 
 
