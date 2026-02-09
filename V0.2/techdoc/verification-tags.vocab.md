@@ -1,9 +1,9 @@
 <!-- markdownlint-disable MD041 -->
-## verification-tags.vocab: Verification Indicators Vocabulary
+## Verification Indicators Vocabulary
 
 ### Summary
 
-This specification defines a controlled vocabulary of VERIFICATION-INDICATORS used to annotate NORMATIVE ASSERTIONS in TECHDOCs.
+This specification defines a controlled vocabulary of Verification INDICATORS used to annotate NORMATIVE ASSERTIONS in TECHDOCs.
 
 ### Inheritance
 
@@ -16,9 +16,9 @@ This document conforms to:
 
 * [TECHDOC Specification](techdoc.spec.md)
 
-### Verification Indicator Vocabulary
+### Verification INDICATOR Vocabulary
 
-The following VERIFICATION-INDICATORS are defined:
+The following Verification INDICATORS are defined:
 
 * PROVABLE implies that conformance can be established via static analysis, structural inspection, or deterministic logic (e.g. parsing, schema validation, keyword presence).
 * TESTABLE implies that conformance can be established by executing one or more pass/fail style tests (unit, integration, or system-level).

@@ -29,8 +29,7 @@ This document conforms to:
 * An ENCODING MUST preserve:
   * E10 all SECTIONS with their names.
   * E11 SECTION and STATEMENT ordering
-  * E12 All STATEMENT and verification identifiers
+  * E12 All STATEMENT and verification INDICATORS
   * E13 all textual or data content
 * E31 An ENCODING MUST NOT introduce additional ASSERTIONs or NARRATIVE statements.
 * E32 Any metadata added by an encoding for transport or tooling purposes MUST be explicitly non-semantic and MUST be removable without information loss.
-* E33 STATEMENTS MUST NOT contain linebreaks.

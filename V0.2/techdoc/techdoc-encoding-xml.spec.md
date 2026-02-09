@@ -32,7 +32,7 @@ This document conforms to:
 * X06 NARRATIVE and INDICATIVE STATEMENTS MUST be encoded as `<statement>` elements containing text content only.
 * X07 NORMATIVE STATEMENTS MUST be encoded as `<statement>` elements with:
   * an `id` attribute containing the STATEMENT identifier,
-  * a `type` attribute mapping to the VERIFICATION-INDICATOR,
+  * a `type` attribute mapping to the verification INDICATOR,
   * text content containing the STATEMENT text.
 * X10 Data SECTIONS MUST contain exactly one `<data>` child element with:
   * a `language` attribute identifying the data language (e.g. `yaml`, `json`),

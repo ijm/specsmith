@@ -19,24 +19,23 @@ This document conforms to:
 
 ### Definitions
 
-* D01 A VERIFICATION-INDICATOR is a standardized annotation attached to a NORMATIVE ASSERTION describing the admissible method(s) of verification.
+* D01 A Verification INDICATOR is a standardized annotation attached to a NORMATIVE ASSERTION describing the admissible method(s) of verification.
 
 ### General Rules
 
-* V01 VERIFICATION-INDICATORS MUST only appear in NORMATIVE ASSERTIONS.
-* V02 A VERIFICATION-INDICATOR MUST NOT introduce or modify NORMATIVE meaning.
-* V03 Each NORMATIVE ASSERTION MUST specify at most one VERIFICATION-INDICATOR.
-* V04 Absence of a VERIFICATION-INDICATOR implies that the method of verification is unspecified.
+* V01 Verification INDICATORS MUST only appear in NORMATIVE ASSERTIONS.
+* V02 A verification INDICATOR MUST NOT introduce or modify NORMATIVE meaning.
+* V03 Each NORMATIVE ASSERTION SHOULD specify at most one verification INDICATOR.
+* V04 Absence of a verification INDICATOR implies that the method of verification is unspecified.
 
 ### Structural Constraints
 
-* V10 Each VERIFICATION-INDICATOR MUST be uniquely identifiable by a single symbol or token.
-* V11 Each VERIFICATION-INDICATOR MUST have exactly one defining INDICATIVE STATEMENT fixing its meaning.
-* V12 VERIFICATION-INDICATORS MUST have disjoint semantics.
+* V11 Each verification INDICATOR MUST have exactly one defining INDICATIVE STATEMENT fixing its meaning.
+* V12 Verification INDICATORS MUST have disjoint semantics.
 
-### Verification Guidance (Informative)
+### Verification Guidance
 
-* Ⓟ indicators are typically validated via parsers, linters, or schema checks.
-* Ⓣ indicators are validated via executable test suites.
-* Ⓗ indicators require human or AI-assisted review.
-* Ⓝ indicators are exempt from verification tooling.
+* PROVABLE statements are typically validated via parsers, linters, or schema checks.
+* TESTABLE statements are typically validated via executable test suites.
+* EVALUATABLE statements are typically require instrumenting the artifact under test.
+* HEURISTIC statements typically require human or AI-assisted review.

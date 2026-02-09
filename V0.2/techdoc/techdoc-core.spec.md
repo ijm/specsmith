@@ -40,7 +40,7 @@ This document conforms to:
 * A03 A NORMATIVE SECTION MUST contain only NORMATIVE STATEMENTS.
 * A04 Each ASSERTION STATEMENT MUST have a unique identifier within the document.
 * A05 INDICATIVE ASSERTIONS MUST NOT impose conformance constraints.
-* A06 A NORMATIVE ASSERTION MUST contain at least one NORMATIVE indicator (e.g. MUST or SHOULD NOT)
+* A06 A NORMATIVE ASSERTION MUST contain at least one NORMATIVE INDICATOR (e.g. MUST or SHOULD NOT)
 
 #### Common STE Rules
 
