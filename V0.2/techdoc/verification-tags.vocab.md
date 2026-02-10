@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-## Verification Indicators Vocabulary
+## verification-tags.vocab: Verification Indicators Vocabulary
 
 ### Summary
 
