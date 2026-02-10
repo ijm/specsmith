@@ -4,6 +4,8 @@ TECHDOC is a framework for writing technical specifications in **ordinary techni
 
 The goal is to introduce a *minimal* set of structural and linguistic conventions that let a specification say both what is allowed or required, and how conformance to those requirements can be evaluated.
 
+These can be summaries as : Use standard technical english, legal contract like capitalized terms, ladled bullet lists, and try to separate narrative, assertive, and imperative sections.
+
 ## Why TECHDOC
 
 In most specification workflows a specification describes what to build, while separate documents, tools, or interpretations are needed to describe how to test or validate it.
