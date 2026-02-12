@@ -23,15 +23,15 @@ This document conforms to:
 
 ### General Rules
 
-* V01 Verification INDICATORS MUST only appear in NORMATIVE ASSERTIONS.
-* V02 A verification INDICATOR MUST NOT introduce or modify NORMATIVE meaning.
-* V03 Each NORMATIVE ASSERTION SHOULD specify at most one verification INDICATOR.
-* V04 Absence of a verification INDICATOR implies that the method of verification is unspecified.
+* V01 Verification INDICATORS MUST only appear in NORMATIVE ASSERTIONS. Ⓟ
+* V02 A verification INDICATOR MUST NOT introduce or modify NORMATIVE meaning. Ⓗ
+* V03 Each NORMATIVE ASSERTION SHOULD specify at most one verification INDICATOR. Ⓗ
+* V04 Absence of a verification INDICATOR implies that the method of verification is unspecified. Ⓝ
 
 ### Structural Constraints
 
-* V11 Each verification INDICATOR MUST have exactly one defining INDICATIVE STATEMENT fixing its meaning.
-* V12 Verification INDICATORS MUST have disjoint semantics.
+* V11 Each verification INDICATOR MUST have exactly one defining INDICATIVE STATEMENT fixing its meaning. Ⓟ
+* V12 Verification INDICATORS MUST have disjoint semantics. Ⓟ
 
 ### Verification Guidance
 

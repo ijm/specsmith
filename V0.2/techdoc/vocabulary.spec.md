@@ -18,12 +18,12 @@ This document conforms to:
 
 ### Structural Constraints
 
-* D01 A DEFINED-TERM MUST NOT contain any unicode lowercase characters.
-* D02 A DEFINED-TERM MUST NOT contain whitespace.
+* D01 A DEFINED-TERM MUST NOT contain any unicode lowercase characters. Ⓟ
+* D02 A DEFINED-TERM MUST NOT contain whitespace. Ⓟ
 * A Vocabulary document:
-  * V01 SHOULD NOT contain NORMATIVE STATEMENTS.
-  * V02 MUST NOT define ADMISSIBILITY conditions for artifacts.
+  * V01 SHOULD NOT contain NORMATIVE STATEMENTS. Ⓗ
+  * V02 MUST NOT define ADMISSIBILITY conditions for artifacts. Ⓟ
 * If document B inherits vocabulary document A:
-  * V03 All DEFINED-TERMS in A are in scope in B.
-  * V04 B MUST NOT alter or redefine DEFINED-TERMS from A.
-* D03 Capitalization within the QUOTED-PHRASE MUST NOT introduce new DEFINED-TERMS.
+  * V03 All DEFINED-TERMS in A are in scope in B. Ⓟ
+  * V04 B MUST NOT alter or redefine DEFINED-TERMS from A. Ⓟ
+* D03 Capitalization within the QUOTED-PHRASE MUST NOT introduce new DEFINED-TERMS. Ⓟ

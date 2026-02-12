@@ -7,7 +7,7 @@ This document introduces DEFINED-TERMS used across the TECHDOC framework.
 
 ### Inheritance
 
-This document conforms to:
+#### Inherits
 
 * [Vocabulary Specification](vocabulary.spec.md)
 
@@ -37,5 +37,5 @@ Additional constraints on interpretation:
 * D32 Multi-word capitalization without hyphenation MUST NOT be interpreted as a DEFINED-TERM. Whitespace indicates they are separate words.
 * D33 A reader or processor MUST NOT introduce, assume, or invent DEFINED-TERMs beyond those explicitly defined in in-scope documents.
 * D34 A QUOTED-PHRASE SHOULD NOT be interpreted as introducing a new DEFINED-TERM.
-* D35 Uncapitalized or unquoted words or phrases MAY be defined by INDICATIVE statements to clarify colloqu ial meaning.
+* D35 Uncapitalized or unquoted words or phrases MAY be defined by INDICATIVE statements to clarify colloquial meaning.
 * D36 Uncapitalized forms SHOULD be interpreted as ordinary language without carrying additional normative force.
