@@ -4,7 +4,7 @@ TECHDOC is a framework for writing technical specifications in **ordinary techni
 
 The goal is to introduce a *minimal* set of structural and linguistic conventions that let a specification say both what is allowed or required, and how conformance to those requirements can be evaluated.
 
-These can be summaries as : Use standard technical english, legal contract like capitalized terms, ladled bullet lists, and try to separate narrative, assertive, and imperative sections.
+These can be summaries as : Use standard technical english, legal contract like capitalized terms, labeled bullet lists, and try to separate narrative, assertive, and imperative sections.
 
 ## Why TECHDOC
 
@@ -24,7 +24,7 @@ The same document that constrains artifacts also constrains how conformance is d
 
 The Frame work lets you write specifications using familiar conventions like standard technical english or capitalized defined terms.
 
-TECHDOCS Clearly separate narrative explanations, assertive definitions, or imperative instructions. They state not only *what* is required, but *how* conformance may be evaluated.
+TECHDOCs Clearly separate narrative explanations, assertive definitions, or imperative instructions. They state not only *what* is required, but *how* conformance may be evaluated.
 
 ## Admissibility and Verification
 
