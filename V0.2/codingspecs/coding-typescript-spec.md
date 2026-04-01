@@ -33,7 +33,6 @@ This document conforms to:
 * TS12 Classes and interfaces SHOULD use `PascalCase` naming. Ⓗ
 * TS13 Files SHOULD use `kebab-case` for directories and `PascalCase` for component files. Ⓗ
 * TS14 Scripts MUST use absolute imports with @/ prefix for internal imports. Ⓟ
-* TS15 Scripts MUST implement proper error boundaries and error handling. Ⓟ
 
 ### Chrome Extension Specific Constraints
 
@@ -52,16 +51,10 @@ This document conforms to:
 
 ### Security Constraints
 
-* TS50 Scripts MUST implement Content Security Policy. Ⓟ
-* TS51 Scripts MUST sanitize user inputs. Ⓟ
-* TS52 Scripts MUST handle sensitive data properly. Ⓟ
-* TS53 Scripts MUST implement proper CORS handling. Ⓟ
+* TS50 Scripts MUST implement Content Security Policy if avaiable. Ⓟ
+* TS51 Scripts MUST sanitize any user inputs. Ⓟ
+* TS53 Scripts MUST implement proper CORS handling for front ends. Ⓟ
 
 ### Prohibited Elements
 
-* TS60 Scripts MUST NOT use deprecated TypeScript features. Ⓟ
-* TS61 Scripts MUST NOT rely on features only available in TypeScript 5.1 or later without explicit declaration. Ⓟ
 * TS62 Scripts MUST NOT use non-standard libraries without explicit declaration. Ⓟ
-* TS63 Scripts MUST NOT contain top-level executable code. Ⓟ
-* TS64 Scripts SHOULD NOT use try/catch blocks. Ⓟ
-* TS65 Scripts SHOULD NOT include comments except for complex logic. Ⓟ
