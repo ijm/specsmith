@@ -19,21 +19,21 @@ This document conforms to:
 
 ### Specification
 
-* J01 A TECHDOC MUST be represented as a single JSON object. Ⓟ
-* J02 The top-level JSON object MUST contain:
+* (J01) A TECHDOC MUST be represented as a single JSON object. Ⓟ
+* (J02) The top-level JSON object MUST contain:
   * `"title"`: string containing the TECHDOC name. Ⓟ
   * `"sections"`: array of SECTION objects. Ⓟ
-* J03 All SECTION objects MUST contain:
+* (J03) All SECTION objects MUST contain:
   * `"name"`:string with the SECTION name. Ⓟ
-* J04 NARRATIVE and ASSERTION SECTION objects MUST contain:
+* (J04) NARRATIVE and ASSERTION SECTION objects MUST contain:
   * `"content"`: array of STATEMENTS. Ⓟ
-* J05 NARRATIVE and INDICATIVE STATEMENTS MUST be represented as strings. Ⓟ
-* J06 NORMATIVE STATEMENTS MUST be represented as objects containing:
+* (J05) NARRATIVE and INDICATIVE STATEMENTS MUST be represented as strings. Ⓟ
+* (J06) NORMATIVE STATEMENTS MUST be represented as objects containing:
   * `"id"`: string, the STATEMENT's unique identifier. Ⓟ
   * `"type"`: string, maps to the verification INDICATOR, Ⓟ
   * `"content"`: string, the statement text. Ⓟ
-* J10 Data SECTION MUST contain the fields:
+* (J10) Data SECTION MUST contain the fields:
   * `"language"` : string, data language identifier (e.g. `yaml`, `json`). Ⓟ
   * `"data"`: string, containing the data. Ⓟ
-* J40 SECTION ordering MUST be preserved. Ⓟ
-* J41 STATEMENT ordering MUST be preserved. Ⓟ
+* (J40) SECTION ordering MUST be preserved. Ⓟ
+* (J41) STATEMENT ordering MUST be preserved. Ⓟ

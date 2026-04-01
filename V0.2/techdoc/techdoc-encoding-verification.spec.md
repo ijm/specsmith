@@ -24,10 +24,10 @@ This document conforms to:
 
 ### Definitions
 
-* D01 A "verification ENCODING" is an ENCODING that represents NORMATIVE ASSERTIONS in terms of their evaluative structure. It is a projection of the normative structure.
-* D02 An AXIS classifies the kind of evaluation implicitly defined by a NORMATIVE ASSERTION.
-* D03 A MEASURE describes how the subject of an AXIS is evaluated or observed.
-* D04 An "ADMISSIBLE region" is the subset of AXIS outcomes that satisfy a NORMATIVE ASSERTION.
+* (D01) A "verification ENCODING" is an ENCODING that represents NORMATIVE ASSERTIONS in terms of their evaluative structure. It is a projection of the normative structure.
+* (D02) An AXIS classifies the kind of evaluation implicitly defined by a NORMATIVE ASSERTION.
+* (D03) A MEASURE describes how the subject of an AXIS is evaluated or observed.
+* (D04) An "ADMISSIBLE region" is the subset of AXIS outcomes that satisfy a NORMATIVE ASSERTION.
 
 ### Axis Examples
 
@@ -45,40 +45,40 @@ e.g. "Must weigh less than 5kg"
 
 Each encoded NORMATIVE ASSERTION MUST contain the named fields:
 
-* E10 `id` - the identifier of the source NORMATIVE ASSERTION. Ⓟ
-* E11 `indicator` - the associated verification INDICATOR. Ⓟ
-* E12 `axis` - exactly one AXIS type. Ⓟ
-* E13 `subject` - the (sub-) entity being evaluated. Ⓟ
+* (E10) `id` - the identifier of the source NORMATIVE ASSERTION. Ⓟ
+* (E11) `indicator` - the associated verification INDICATOR. Ⓟ
+* (E12) `axis` - exactly one AXIS type. Ⓟ
+* (E13) `subject` - the (sub-) entity being evaluated. Ⓟ
 
 Each encoded NORMATIVE ASSERTION MAY if needed contain the fields:
 
-* E14 `measure` - the MEASURE, method, or procedure for evaluation. Ⓟ
-* E15 `admission` - the ADMISSIBLE region that is the set of acceptable outcomes. Ⓟ
-* E16 `narrative` - the narrative component of the statement if present Ⓟ
+* (E14) `measure` - the MEASURE, method, or procedure for evaluation. Ⓟ
+* (E15) `admission` - the ADMISSIBLE region that is the set of acceptable outcomes. Ⓟ
+* (E16) `narrative` - the narrative component of the statement if present Ⓟ
 
 ### Conditional Requirements by Verification Indicator
 
 #### Provable, Testable, Evaluatable (Ⓟ Ⓣ Ⓔ)
 
-* V20 A MEASURE MUST be explicitly defined for PROVABLE, TESTABLE, and EVALUATABLE statements. Ⓟ
-* V21 An ADMISSIBLE region MUST be explicitly defined for PROVABLE, TESTABLE, and EVALUATABLE statements. Ⓟ
+* (V20) A MEASURE MUST be explicitly defined for PROVABLE, TESTABLE, and EVALUATABLE statements. Ⓟ
+* (V21) An ADMISSIBLE region MUST be explicitly defined for PROVABLE, TESTABLE, and EVALUATABLE statements. Ⓟ
 
 #### Heuristic (Ⓗ)
 
-* V30 A MEASURE SHOULD be described, but MAY be informal for HEURISTIC statements. Ⓗ
-* V31 An ADMISSIBLE region SHOULD be described, but MAY be informal for HEURISTIC statements. Ⓗ
+* (V30) A MEASURE SHOULD be described, but MAY be informal for HEURISTIC statements. Ⓗ
+* (V31) An ADMISSIBLE region SHOULD be described, but MAY be informal for HEURISTIC statements. Ⓗ
 
 #### Notation (Ⓝ)
 
-* V40 A MEASURE MAY be omitted for NOTATION statements. Ⓝ
-* V41 An ADMISSIBLE region MAY be omitted for NOTATION statements. Ⓝ
-* V42 The ASSERTION MUST NOT claim evaluability or verification for NOTATION statements. Ⓟ
+* (V40) A MEASURE MAY be omitted for NOTATION statements. Ⓝ
+* (V41) An ADMISSIBLE region MAY be omitted for NOTATION statements. Ⓝ
+* (V42) The ASSERTION MUST NOT claim evaluability or verification for NOTATION statements. Ⓟ
 
 ### Admissibility and Round-Trip Constraints
 
-* V61 Conversion from TECHDOC → Verification ENCODING → TECHDOC MUST preserve:
+* (V61) Conversion from TECHDOC → Verification ENCODING → TECHDOC MUST preserve:
   * the set of NORMATIVE ASSERTIONS, Ⓟ
   * their identifiers, Ⓟ
   * their verification INDICATORS, Ⓟ
   * and their normative meaning. Ⓟ
-* V62 Natural language realization MAY differ on round-trip, but semantic equivalence MUST be preserved. Ⓣ
+* (V62) Natural language realization MAY differ on round-trip, but semantic equivalence MUST be preserved. Ⓣ

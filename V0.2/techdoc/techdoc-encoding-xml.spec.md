@@ -20,22 +20,22 @@ This document conforms to:
 
 ### Specification
 
-* X01 A TECHDOC MUST be represented as a single XML document. Ⓟ
-* X02 The root element MUST be `<techdoc>`. Ⓟ
-* X03 The `<techdoc>` element MUST contain:
+* (X01) A TECHDOC MUST be represented as a single XML document. Ⓟ
+* (X02) The root element MUST be `<techdoc>`. Ⓟ
+* (X03) The `<techdoc>` element MUST contain:
   * a `<title>` element containing the TECHDOC name. Ⓟ
   * an ordered sequence of `<section>` elements. Ⓟ
-* X04 Each `<section>` element MUST contain:
+* (X04) Each `<section>` element MUST contain:
   * a `name` attribute whose value is the SECTION name. Ⓟ
-* X05 NARRATIVE and ASSERTION SECTIONS MUST contain:
+* (X05) NARRATIVE and ASSERTION SECTIONS MUST contain:
   * an ordered sequence of `<statement>` child elements. Ⓟ
-* X06 NARRATIVE and INDICATIVE STATEMENTS MUST be encoded as `<statement>` elements containing text content only. Ⓟ
-* X07 NORMATIVE STATEMENTS MUST be encoded as `<statement>` elements with:
+* (X06) NARRATIVE and INDICATIVE STATEMENTS MUST be encoded as `<statement>` elements containing text content only. Ⓟ
+* (X07) NORMATIVE STATEMENTS MUST be encoded as `<statement>` elements with:
   * an `id` attribute containing the STATEMENT identifier, Ⓟ
   * a `type` attribute mapping to the verification INDICATOR, Ⓟ
   * text content containing the STATEMENT text. Ⓟ
-* X10 Data SECTIONS MUST contain exactly one `<data>` child element with:
+* (X10) Data SECTIONS MUST contain exactly one `<data>` child element with:
   * a `language` attribute identifying the data language (e.g. `yaml`, `json`), Ⓟ
   * text content containing the serialized data. Ⓟ
-* X40 SECTION order MUST be preserved by document order. Ⓟ
-* X41 STATEMENT order MUST be preserved by element order. Ⓟ
+* (X40) SECTION order MUST be preserved by document order. Ⓟ
+* (X41) STATEMENT order MUST be preserved by element order. Ⓟ

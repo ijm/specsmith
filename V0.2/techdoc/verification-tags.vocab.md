@@ -20,8 +20,8 @@ This document conforms to:
 
 The following Verification INDICATORS are defined:
 
-* PROVABLE implies that conformance can be established via static analysis, structural inspection, or deterministic logic (e.g. parsing, schema validation, keyword presence).
-* TESTABLE implies that conformance can be established by executing one or more pass/fail style tests (unit, integration, or system-level).
-* EVALUATABLE implies that conformance is determined by measuring a graded or continuous quantity against explicit acceptance criteria defined by the assertion (e.g. thresholds, ranges, or ordered comparisons).
-* HEURISTIC implies that conformance is assessed via subjective judgment, expert review, or AI-assisted evaluation. Results are inherently non-deterministic.
-* NOTATION implies that the assertion documents a constraint or convention that is not intended to be verified.
+* (V01) PROVABLE implies that conformance can be established via static analysis, structural inspection, or deterministic logic (e.g. parsing, schema validation, keyword presence).
+* (V02) TESTABLE implies that conformance can be established by executing one or more pass/fail style tests (unit, integration, or system-level).
+* (V03) EVALUATABLE implies that conformance is determined by measuring a graded or continuous quantity against explicit acceptance criteria defined by the assertion (e.g. thresholds, ranges, or ordered comparisons).
+* (V04) HEURISTIC implies that conformance is assessed via subjective judgment, expert review, or AI-assisted evaluation. Results are inherently non-deterministic.
+* (V05) NOTATION implies that the assertion documents a constraint or convention that is not intended to be verified.
