@@ -18,7 +18,7 @@ function Pandoc(el)
     local meta_vars = {"githash", "docname", "copyright", "license", "audience", "scope", "revision", "hash"}
     
     table.insert(el.blocks, 1, pandoc.RawBlock("latex",
-      "\\vspace{0cm}\\boilerplate\\vspace{1cm}"))
+      "\\vspace{0.01cm}\\boilerplate\\vspace{1cm}"))
     for _, varname in ipairs(meta_vars) do
         local value = el.meta[varname]
         if value then
