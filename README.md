@@ -2,7 +2,7 @@
 
 ## Status
 
-**Work in Progress**
+**This is a work in progress**
 
 Specification generation and verification, for other specifications, documents, and code.
 
